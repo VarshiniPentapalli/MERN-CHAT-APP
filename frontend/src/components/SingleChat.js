@@ -20,7 +20,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import "./styles.css";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "/";
 let socket;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {

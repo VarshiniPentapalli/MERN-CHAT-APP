@@ -125,7 +125,7 @@ import {
   VStack,
   useToast,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { ChatState } from "../../Context/ChatProvider";
 
@@ -135,7 +135,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate();
+  const history = useHistory();
   const toast = useToast();
   const { setUser } = ChatState();
 
@@ -173,7 +173,7 @@ const Login = () => {
         position: "bottom",
       });
 
-      navigate("/chats");
+      history.push("/chats");   // ✅ v5 correct
     } catch (error) {
       toast({
         title: "Login failed",

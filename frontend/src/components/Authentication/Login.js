@@ -113,7 +113,6 @@
 
 // export default Login;
 
-
 import React, { useState } from "react";
 import {
   Button,
@@ -173,7 +172,7 @@ const Login = () => {
         position: "bottom",
       });
 
-      history.push("/chats");   // ✅ v5 correct
+      history.push("/chats");  
     } catch (error) {
       toast({
         title: "Login failed",
@@ -193,10 +192,7 @@ const Login = () => {
     <VStack spacing="10px">
       <FormControl isRequired>
         <FormLabel>Email</FormLabel>
-        <Input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <Input value={email} onChange={(e) => setEmail(e.target.value)} />
       </FormControl>
 
       <FormControl isRequired>
